@@ -8,7 +8,7 @@ const ModuleShowcase: React.FC = () => {
     const modules = useModules();
 
     return (
-        <section className="relative py-12">
+        <section className="relative py-12 ">
             <Container className="pb-0"> {/* alt padding'i sıfırladık */}
                 <div className="text-center mb-12">
                     <h2 className="text-6xl font-bold text-gray-900">

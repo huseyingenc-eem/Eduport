@@ -1,20 +1,29 @@
 import React from "react";
+import clsx from "clsx";
 
 interface ContainerProps {
     children: React.ReactNode;
     className?: string;
-    innerClassName?: string; // Header gibi durumlar için ekstra class
+    innerClassName?: string;
 }
 
-const Container: React.FC<ContainerProps> = ({ children, className = "", innerClassName = "" }) => {
+const Container: React.FC<ContainerProps> = ({
+                                                 children,
+                                                 className = "",
+                                                 innerClassName,
+                                             }) => {
     return (
-        <div className={` px-4 sm:px-6 lg:px-8 ${className}`}>
-            <div className={`max-w-screen-xl w-full mx-auto ${innerClassName}`}>
+        <div className={clsx("w-full", className)}>
+            <div
+                className={clsx(
+                    "max-w-screen-xl w-full mx-auto",
+                    innerClassName ?? "px-6 sm:px-6 lg:px-8"
+                )}
+            >
                 {children}
             </div>
         </div>
     );
 };
-
 
 export default Container;

@@ -3,7 +3,7 @@ import { Container } from "@/components";
 import { Docker, ReactLogo, Meta , Aws } from "@/assets/images";
 const FeaturesGridSection: React.FC = () => {
     return (
-        <section className="py-12">
+        <section className="py-12 ">
             <Container>
                 {/* Üst Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
